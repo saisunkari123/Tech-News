@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sai Tech News — Your gateway to the latest in technology, AI, and innovation. Stay informed with curated tech headlines." />
+  <meta name="theme-color" content="#1a73e8" />
+  <title>Sai Tech News — Latest Technology Headlines</title>
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient background glow for premium dark mode -->
+  <div class="bg-glow"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       Navigation Bar (Sticky)
+       ═══════════════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="navbar__logo" aria-label="Sai Tech News logo">
+      <div class="navbar__logo-icon">S</div>
+      Sai Tech <span>News</span>
+    </div>
+
+    <div class="navbar__search">
+      <!-- Search icon (inline SVG for zero-dependency icons) -->
+      <svg class="navbar__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="search-input" class="navbar__search-input" placeholder="Search tech news…"
+        aria-label="Search articles" autocomplete="off" />
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       Hero Section
+       ═══════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Page header">
+    <h1 class="hero__title">Today in Tech</h1>
+    <p class="hero__subtitle">Curated headlines from the world's top technology publications.</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       Results Bar
+       ═══════════════════════════════════════════════════════ -->
+  <div class="results-bar">
+    <span class="results-bar__count" id="results-count">Loading…</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       News Grid (populated dynamically by script.js)
+       ═══════════════════════════════════════════════════════ -->
+  <main>
+    <section class="news-grid" id="news-grid" aria-label="News articles">
+      <!-- Cards are injected here by JavaScript -->
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    © 2026 <span>Sai Tech News</span>. Built with care for the tech community.
+  </footer>
+
+  <!-- Application Logic (deferred to avoid blocking render) -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
